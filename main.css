@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+#bar {
+  position: absolute;
+  color: white;
+}
+
+#header {
+  padding: 80px;
+  text-align: center;
+  background: black;
+  color: white;
+}
+#main {
+  padding: 10px 10px;
+  background: #222;
+  color:#ffffff;
+}
+.section {
+  padding: 80px;
+  margin: 10px 0px;
+  display: grid;
+  place-items: center;
+
+  border-style: solid;
+  border-color: white;
+}
+
+#about {
+    margin-top: 0px;
+}
+#skills {
+}
+#projects {
+}
+#work {
+}
+#teams {
+}
+#awards {
+}
+hr{
+    width: 100%;
+}

@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Personal Portfolio</title>
     <link rel="stylesheet" href="main.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
     <header>
         <nav>
-            <ul id="nav_links">
-                <li class="underline_effect"><a href="#home">HOME</a></li>
-                <li class="underline_effect"><a href="#about">ABOUT</a></li>
-                <li class="underline_effect"><a href="#skills">SKILLS</a></li>
-                <li class="underline_effect"><a href="#projects">PROJECTS</a></li>
-                <li class="underline_effect"><a href="#work">WORK</a></li>
-                <li class="underline_effect"><a href="#teams">TEAMS</a></li>
-                <li class="underline_effect"><a href="#awards">AWARDS</a></li>
-            </ul>
+            <div id="nav_toggle">
+                <i class='bx bx-menu-alt-right'></i>
+            </div>
+            <div class="nav_menu"id="nav_menu">
+                <ul id="nav_links">
+                    <li><a  class="underline_effect" href="#home">HOME</a></li>
+                    <li><a  class="underline_effect" href="#about">ABOUT</a></li>
+                    <li><a  class="underline_effect" href="#skills">SKILLS</a></li>
+                    <li><a  class="underline_effect" href="#projects">PROJECTS</a></li>
+                    <li><a  class="underline_effect" href="#work">WORK</a></li>
+                    <li><a  class="underline_effect" href="#teams">TEAMS</a></li>
+                    <li><a  class="underline_effect"    href="#awards">AWARDS</a></li>
+                </ul>
+            </div>   
         </nav>
     </header>
     <div id="home">
@@ -53,6 +60,6 @@
     <div class="footer">
         <p class="underline_effect">Hello!</p>
     </div>
-
+    <script src="main.js"></script>
 </body>
 </html>

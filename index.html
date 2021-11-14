@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav>
-            <div id="nav_toggle">
+            <div class="nav_toggle"id="nav_toggle">
                 <i class='bx bx-menu-alt-right'></i>
             </div>
             <div class="nav_menu"id="nav_menu">
@@ -28,8 +28,15 @@
             </div>   
         </nav>
     </header>
-    <div id="home">
-        <h1>HEADER</h1>
+    <div class="home" id="home">
+        <div class="home_parallax parallax" id="img1" data-rellax-speed="-9"></div>
+        <div class="home_parallax parallax" id="img2" data-rellax-speed="-7"></div>
+        <div class="home_parallax parallax" id="img3" data-rellax-speed="-6"></div>
+        <div class="home_parallax parallax" id="img4" data-rellax-speed="-3"></div>
+
+
+        <h1 class="parallax" id="home_title" data-rellax-speed="-6">Hi! I'm Chris</h1>
+        <span class="parallax"  id="home_subtitle" data-rellax-speed="-5">I'm a programmer</span>
     </div>
     <div id="main">
         <div class="section" id="about">
@@ -60,6 +67,9 @@
     <div class="footer">
         <p class="underline_effect">Hello!</p>
     </div>
+    <script src="assets/rellax.min.js"></script>
+    <script scr="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    
     <script src="main.js"></script>
 </body>
 </html>

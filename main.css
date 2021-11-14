@@ -6,6 +6,7 @@
 }
 :root{
     --highlight-color:#3498db;
+    --highlight-secondary-color:#7bb5db;
     --main-bg-color: #222;
     --main-text-color: #fff;
 }
@@ -40,12 +41,32 @@ ul{
 }
 
 #nav_links li a{
-    transition: all 0.3s ease 0s;
-    padding:0px 20px;
+    margin:0px 20px;
 }
 
-#nav_links li a:hover{
-    color:white
+
+/*============UNDERLINE EFFECT CSS==========*/
+.underline_effect{
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.25rem;
+}
+.underline_effect::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--highlight-color);
+    background-image: linear-gradient(to right, var(--highlight-color),var(--highlight-secondary-color));
+    transition: width 0.25s ease-out;
+}
+
+.underline_effect:hover::before{
+    width:100%;
+    left: 0;
+    right: auto;
 }
 
 /*===========BODY CSS==========*/
@@ -90,8 +111,7 @@ body{
 }
 hr{
     width: 100%;
-    height:1px;
-    border-radius:100px;
-    background-color: var(--highlight-color);
-    border-color:var(--highlight-color);
+    height:3px;
+    border:0;
+    background: linear-gradient(to right, var(--highlight-color),var(--highlight-secondary-color));
 }

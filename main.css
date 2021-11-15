@@ -8,14 +8,14 @@
 :root {
   --highlight-color: #3498db;
   --highlight-secondary-color: #7bb5db;
-  --main-bg-color: #222;
+  --main-bg-color: #1e1e1e;
   --main-text-color: #f2f2f2;
 }
 
 :root {
   --body-font: "Open Sans", sans-serif;
 
-  --biggest-font-size: 3.5rem;
+  --biggest-font-size: 5rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
 
@@ -60,14 +60,14 @@ header {
   z-index: var(--z-modal);
 }
 
-nav {
+#nav_bar{
   height: var(--header-height);
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
-  
+  transition: 0.3s ease;
 }
 
 li,
@@ -75,6 +75,7 @@ a {
   text-decoration: none;
   display: inline-block;
   color: var(--main-text-color);
+  padding: 10px;
 }
 
 .nav_menu a{
@@ -88,19 +89,21 @@ ul {
 
 #nav_toggle {
   font-size: 1.5rem;
-  color: var(--main-text-color);
+  /*color: var(--main-text-color);*/
+  color: transparent;
   cursor: pointer;
   padding: 10px;
+  z-index: var(--z-modal);
 }
 
 @media screen and (max-width: 768px) {
   .nav_menu {
     position: fixed;
     right: -100%;
-    top: var(--header-height);
-    background-color: rgba(0, 0, 0, 0.9);
+    top: 0;
+    background-color: rgb(0, 0, 0);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     padding: 2rem;
     text-align: center;
     z-index: var(--z-fixed);
@@ -119,6 +122,9 @@ ul {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+  #nav_toggle {
+    color: var(--main-text-color)
   }
 }
 
@@ -150,8 +156,8 @@ ul {
   background-color: var(--highlight-color);
   background-image: linear-gradient(
     to right,
-    var(--highlight-color),
-    var(--highlight-secondary-color)
+    var(--main-text-color),
+    var(--main-text-color)
   );
   transition: width 0.25s ease-out;
 }
@@ -208,6 +214,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  font-size: var(--biggest-font-size);
   columns: var(--main-text-color);
   color:var(--main-text-color);
 }
@@ -218,7 +225,7 @@ body {
   z-index: var(--z-normal);
 }
 #home_subtitle {
-  top: 44%;
+  top: 50%;
   font-size: var(--h2-font-size);
   z-index: var(--z-tooltip);
 }

@@ -27,10 +27,36 @@ const removeMenu = () =>{
 showMenu('nav_toggle', 'nav_menu')
 removeMenu();
 
+/*=========SCROLL HANDLER ===========*/
+window.addEventListener("scroll", function(event){
+    var scroll = this.scrollY;
+    let viewportHeight = window.innerHeight;
+    bar = document.getElementById('nav_bar');
+    let barHeight = bar.offsetHeight;
+    if(scroll > viewportHeight - barHeight){
+        bar.style.backgroundColor = "rgba(18,18,18,255)";
+        bar.style.filter= "drop-shadow(0px 10px 4px black)";
+    }
+    else{
+        bar.style.backgroundColor = "transparent";
+        bar.style.filter= "none";
+    }
+})
+
 /*========= RELLAX JS ==========*/
 var rellax = new Rellax('.parallax');
 
 /*=========GSAP ANIMATION========*/
 gsap.from('.nav_toggle', {opacity:0, duration: 3, delay: .7, y: 30, ease:'expo.out'});
+gsap.from('.underline_effect', {opacity:0, duration: 3, delay: 1.3, y: 35, ease:'expo.out'});
+
 gsap.from('#home_title', {opacity:0, duration: 3, delay: 1.3, y: 35, ease:'expo.out'});
-gsap.from('#home_subtitle', {opacity:0, duration: 3, delay: 1.1 , y: 35, ease:'expo.out'});
+gsap.from('#home_subtitle', {opacity:0, duration: 3, delay: 1.1, y: 35, ease:'expo.out'});
+
+/*===== SCROLL REVEAL =======*/
+const sr = new ScrollReveal({
+    duration: 2500,
+    reset: true
+})
+
+sr.reveal('.section_title', {origin: 'top', distance: '70px'})

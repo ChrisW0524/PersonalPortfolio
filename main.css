@@ -9,6 +9,7 @@
   --highlight-color: #3498db;
   --highlight-secondary-color: #7bb5db;
   --main-bg-color: #1e1e1e;
+  --darker-bg-color: rgba(18,18,18,255);
   --main-text-color: #f2f2f2;
 }
 
@@ -240,7 +241,6 @@ body {
   margin-bottom: 200px;
   display: grid;
   place-items: center;
-
   border-style: solid;
   border-color: white;
 }
@@ -248,8 +248,131 @@ body {
 #about {
   margin-top: 0px;
 }
-#skills {
+/*========= SKILLS BAR =========*/
+.skills_bar{
+  margin-top: 50px;
+  width: 100%;
+  background-color: var(--darker-bg-color);
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 5px 5px 10px black;
 }
+
+.bar{
+  margin: 20px 0px;
+}
+
+.bar:first-child{
+  margin-top: 0px;
+}
+
+.info{
+  margin-bottom: 5px;
+}
+
+.info span{
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.bar .progress_line{
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background-color: var(--main-bg-color);
+  border-radius: 10px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5,1) forwards;
+}
+
+.bar .progress_line span{
+  height: 100%;
+  background-color: var(--highlight-color);
+  position: absolute;
+  border-radius: 10px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5,1) forwards;
+
+}
+.bar .progress_line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  height: 0;
+  width:0;
+  right: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: var(--main-text-color);
+
+  opacity: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+
+}
+
+.bar .progress_line span::after{
+  position: absolute;
+  top: -26px;
+  right: 0;
+  color: var(--main-bg-color);
+  background-color: var(--main-text-color);
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  padding: 1px 8px;
+  border-radius: 3px;
+  
+  opacity: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+}
+.htmlcss span{
+  width: 85%;
+}
+.java span{
+  width: 75%;
+}
+.python span{
+  width: 60%;
+}
+.adobe span{
+  width: 45%;
+}
+.javascript span{
+  width: 50%;
+}
+
+.htmlcss span::after{
+  content: "85%";
+}
+.java span::after{
+  content: "75%";
+}
+.python span::after{
+  content: "60%";
+}
+.adobe span::after{
+  content: "45%";
+}
+.javascript span::after{
+  content: "50%";
+}
+
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+
+@keyframes showText{
+  100%{
+    opacity: 1;
+  }
+}
+
 #projects {
 }
 #work {

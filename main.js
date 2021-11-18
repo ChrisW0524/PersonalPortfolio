@@ -34,7 +34,7 @@ window.addEventListener("scroll", function(event){
     bar = document.getElementById('nav_bar');
     let barHeight = bar.offsetHeight;
     if(scroll > viewportHeight - barHeight){
-        bar.style.backgroundColor = "rgba(18,18,18,255)";
+        bar.style.backgroundColor = "#272626";
         bar.style.filter= "drop-shadow(0px 10px 4px black)";
     }
     else{
@@ -60,3 +60,9 @@ const sr = new ScrollReveal({
 })
 
 sr.reveal('.section_title', {origin: 'top', distance: '70px'})
+
+/*===== Card animations =====*/
+function toggleTitleUnderline(title_id){
+    var title = document.getElementById(title_id); 
+    console.log(card);
+}

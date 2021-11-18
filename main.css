@@ -8,9 +8,16 @@
 :root {
   --highlight-color: #3498db;
   --highlight-secondary-color: #7bb5db;
-  --main-bg-color: #1e1e1e;
-  --darker-bg-color: rgba(18,18,18,255);
+  --main-bg-color: #302f2f;
+  --darker-bg-color: #272626;
   --main-text-color: #f2f2f2;
+
+  --card_color_1: #e74c3c;
+  --card_color_2: #16a085;
+  --card_color_3: #2ecc71;
+  --card_color_4: #8e44ad;
+  --card_color_5: #f39c12;
+  --card_color_6: #3498db;
 }
 
 :root {
@@ -373,8 +380,101 @@ body {
   }
 }
 
-#projects {
+/* ==========PROJECT CARDS ========*/
+.projects_container{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+.card{
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background-color: var(--darker-bg-color);
+  margin: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.card h2 {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+.card h2::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--highlight-color);
+  background-image: linear-gradient(
+    to right,
+    var(--main-text-color),
+    var(--main-text-color)
+  );
+  transition: width 0.25s ease-out;
+}
+
+.card:hover{
+  transform: scale(1.05);
+}
+.card:hover > .icon{
+  color: var(--main-text-color);
+}
+
+.card:hover > .card_title > a > h2::before{
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.icon{
+  font-size: 3.5rem;
+  transition: 0.25s ease;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+}
+.snall_icon_container{
+  display: inline-block;
+  
+}
+.small_icon{
+  font-size: 2.5rem;
+  transition: 0.25s ease;
+}
+.small_icon_container:hover{
+  transform: scale(1.2);
+}
+
+#card_1 .small_icon_container > a:hover{
+  color: var(--card_color_1);
+}
+#card_1 .icon{
+  color: var(--card_color_1);
+}
+#card_1:hover > .icon{
+  background-color: var(--card_color_1);
+  color: var(--main-text-color);
+}
+
 #work {
 }
 #teams {

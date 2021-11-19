@@ -118,7 +118,7 @@ ul {
     transition: 0.75s ease;
   }
   li,
-  a {
+  #nav_bar a {
     display: block;
     text-align: center;
     margin-bottom: 2rem;
@@ -449,12 +449,12 @@ body {
   border-radius: 50%;
   width: 100px;
   height: 100px;
+  min-height: 100px;
   display: grid;
   place-items: center;
 }
-.snall_icon_container{
+.small_icon_container{
   display: inline-block;
-  
 }
 .small_icon{
   font-size: 2.5rem;
@@ -525,9 +525,3 @@ hr {
   );
 }
 
-/*====== MEDIA QUERIES======*/
-@media screen and(min-width: 768px) {
-  nav{
-    height: var(--header-height) + 1rem;
-  }
-}

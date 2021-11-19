@@ -1,5 +1,5 @@
 /*==================BASE CSS===============*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 :root {
   --header-height: 3rem;
@@ -46,6 +46,7 @@
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  font-family: 'Poppins', sans-serif;
 }
 body {
   font-family: var(--body-font);
@@ -237,11 +238,18 @@ body {
   font-size: var(--h2-font-size);
   z-index: var(--z-tooltip);
 }
+#main_container{
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+  display: flex;
+  justify-content: center;
+}
 
 #main {
   padding: 10px 10px;
   background: var(--main-bg-color);
   color: var(--main-text-color);
+  max-width: 1250px;
 }
 .section {
   padding: 80px;
@@ -508,12 +516,55 @@ body {
   color: var(--main-text-color);
 }
 
-#work {
+/*====== ACCORDION CSS ============*/
+.accordion{
+  width: 100%;
 }
-#teams {
+
+.accordion .content_container{
+  position: relative;
+  margin: 10px 20px;
 }
-#awards {
+
+.accordion .content_container .label{
+  position: relative;
+  padding: 10px;
+  background-color: var(--darker-bg-color);
+  cursor: pointer;
 }
+
+.accordion .content_container .label::before{
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+.accordion .content_container .content{
+  position: relative;
+  background-color: #383838;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: hidden;
+  padding-left: 10px;
+}
+
+.accordion .content_container.active .content{
+  height: 150px;
+  padding: 10px;
+}
+
+.accordion .content_container.active .label::before{
+  content: '-';
+  font-size: 1.5 rem;
+}
+
+
+
+/* HR CSS*/
 hr {
   width: 100%;
   height: 3px;

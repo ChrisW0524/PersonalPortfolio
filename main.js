@@ -60,8 +60,10 @@ const sr = new ScrollReveal({
 
 sr.reveal('.section_title', {origin: 'top', distance: '70px'})
 
-/*===== Card animations =====*/
-function toggleTitleUnderline(title_id){
-    var title = document.getElementById(title_id); 
-    console.log(card);
+/*===== Accordion JS =====*/
+const accordion = document.getElementsByClassName('content_container');
+for(i = 0; i < accordion.length; i++){
+    accordion[i].addEventListener('click', function(){
+        this.classList.toggle('active');
+    })
 }

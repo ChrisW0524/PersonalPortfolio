@@ -23,7 +23,6 @@ const removeMenu = () =>{
     }
 }
 
-
 showMenu('nav_toggle', 'nav_menu')
 removeMenu();
 

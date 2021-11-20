@@ -185,10 +185,6 @@ body {
 /*=========HOME PAGE CSS==========*/
 .home {
   height: 100vh;
-  /*padding: 80px;
-  text-align: center;
-  background: white;
-  color: black;*/
   overflow: hidden;
   position: relative;
 }
@@ -202,19 +198,19 @@ body {
   background-position: center;
 }
 #img1 {
-  background-image: url("/assets/imgm1.png");
+  background-image: url("/assets/imgm1.webp");
   z-index: var(--z-normal);
 }
 #img2 {
-  background-image: url("/assets/imgm2.png");
+  background-image: url("/assets/imgm2.webp");
   z-index: var(--z-tooltip);
 }
 #img3 {
-  background-image: url("/assets/imgm3.png");
+  background-image: url("/assets/imgm3.webp");
   z-index: var(--z-fixed);
 }
 #img4 {
-  background-image: url("/assets/imgm4.png");
+  background-image: url("/assets/imgm4.webp");
   z-index: var(--z-fixed);
 }
 #home_title,

@@ -54,11 +54,16 @@ gsap.from('#home_subtitle', {opacity:0, duration: 3, delay: 1.1, y: 35, ease:'ex
 
 /*===== SCROLL REVEAL =======*/
 const sr = new ScrollReveal({
-    duration: 2500,
+    duration: 1000,
     reset: true
 })
 
 sr.reveal('.section_title', {origin: 'top', distance: '70px'})
+
+sr.reveal('.reveal_bottom', {origin: 'bottom', distance: '70px'})
+
+sr.reveal('.scale_reveal', {scale: 0})
+
 
 /*===== Accordion JS =====*/
 const accordion = document.getElementsByClassName('content_container');

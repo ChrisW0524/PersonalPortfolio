@@ -114,7 +114,7 @@ ul {
 }
 
 .show {
-  right: 0;
+  left: 0;
 }
 
 /*============UNDERLINE EFFECT CSS==========*/
@@ -205,12 +205,8 @@ body {
 #main_container{
   background: var(--main-bg-color);
   color: var(--main-text-color);
-  display: flex;
-  justify-content: center;
 }
-
 #main {
-  padding: 10px 10px;
   background: var(--main-bg-color);
   color: var(--main-text-color);
   max-width: 1250px;
@@ -221,7 +217,7 @@ body {
 }
 .section {
   width:100%;
-  padding: 80px;
+  padding: 30px;
   margin-bottom: 200px;
   text-align: center;
 }
@@ -605,10 +601,10 @@ hr {
 @media only screen and (max-width: 768px) {
   :root{
     --biggest-font-size: 3rem;
-    --h1-font-size: 3.5rem;
-    --h2-font-size: 1.25rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.15rem;
     --big-font-size: 1.15rem;
-    --normal-font-size: 1rem;
+    --normal-font-size: 0.9rem;
   }
   .info{
     margin-bottom: 35px;

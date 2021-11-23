@@ -506,6 +506,17 @@ body {
   color: var(--main-text-color);
 }
 
+#card_5 .small_icon_container > a:hover{
+  color: var(--card_color_5);
+}
+#card_5 .icon{
+  color: var(--card_color_5);
+}
+#card_5:hover > .icon{
+  background-color: var(--card_color_5);
+  color: var(--main-text-color);
+}
+
 /*====== ACCORDION CSS ============*/
 .accordion{
   width: 100%;

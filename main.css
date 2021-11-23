@@ -263,6 +263,7 @@ body {
   text-align: left;
 }
 
+
 .bar{
   margin: 20px 0px;
 }
@@ -405,6 +406,7 @@ body {
   padding: 20px;
   text-align: center;
   transition: 0.25s ease;
+
 }
 
 .card h2 {
@@ -514,6 +516,17 @@ body {
 }
 #card_5:hover > .icon{
   background-color: var(--card_color_5);
+  color: var(--main-text-color);
+}
+
+#card_6 .small_icon_container > a:hover{
+  color: var(--card_color_6);
+}
+#card_6 .icon{
+  color: var(--card_color_6);
+}
+#card_6:hover > .icon{
+  background-color: var(--card_color_6);
   color: var(--main-text-color);
 }
 

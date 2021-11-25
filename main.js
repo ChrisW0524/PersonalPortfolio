@@ -66,13 +66,9 @@ sr.reveal('.scale_reveal', {scale: 0})
 
 
 /*===== Accordion JS =====*/
-const accordion = document.getElementsByClassName('content_container');
-for(i = 0; i < accordion.length; i++){
-    accordion[i].addEventListener('click', function(){
-        this.classList.toggle('active');
+const label = document.getElementsByClassName('label');
+for(i = 0; i < label.length; i++){
+    label[i].addEventListener('click', function(){
+        this.parentElement.classList.toggle('active');
     })
 }
-
-$(document).ready(function(){
-    console.log($("body"));
-});

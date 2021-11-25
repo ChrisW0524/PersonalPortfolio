@@ -615,26 +615,23 @@ body {
   text-decoration: underline;
 }
 
-.content h3{
-  margin-bottom: 15px;
-}
-
 .content ul{
   display: static;
-  list-style-type: circle;
+  list-style-type: disc;
   list-style-position: inside;
+  margin-top: 10px;
 }
 
 .content li{
   display: list-item;
   padding: 0px;
 }
-.content i{
+.content .date_text{
   color: #b9b9b9;
 }
 
 .accordion .content_container.active .content{
-  height: 300px;
+  height: auto;
 }
 
 

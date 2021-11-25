@@ -577,6 +577,34 @@ body {
   font-size: 1.5 rem;
 }
 
+.label h2 {
+  font-size: var(--h2-font-size);
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+.label h2::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--highlight-color);
+  background-image: linear-gradient(
+    to right,
+    var(--main-text-color),
+    var(--main-text-color)
+  );
+  transition: width 0.25s ease-out;
+}
+
+.label:hover > h2::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
 
 
 /* HR CSS*/

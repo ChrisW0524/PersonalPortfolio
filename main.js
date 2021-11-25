@@ -72,3 +72,7 @@ for(i = 0; i < accordion.length; i++){
         this.classList.toggle('active');
     })
 }
+
+$(document).ready(function(){
+    console.log($("body"));
+});

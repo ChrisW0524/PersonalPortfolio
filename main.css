@@ -574,7 +574,6 @@ body {
 }
 
 .accordion .content_container.active .content{
-  height: 300px;
   padding: 30px;
 }
 
@@ -630,6 +629,15 @@ body {
   display: list-item;
   padding: 0px;
 }
+.content i{
+  color: #b9b9b9;
+}
+
+.accordion .content_container.active .content{
+  height: 300px;
+}
+
+
 
 
 
@@ -661,7 +669,7 @@ hr {
     z-index: var(--z-fixed);
     transition: 0.75s ease;
   }
-  li,
+  #nav_bar li,
   #nav_bar a {
     display: block;
     text-align: center;

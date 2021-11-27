@@ -49,8 +49,8 @@ var rellax = new Rellax('.parallax');
 gsap.from('.nav_toggle', {opacity:0, duration: 3, delay: .7, y: 30, ease:'expo.out'});
 gsap.from('.underline_effect', {opacity:0, duration: 3, delay: 1.3, y: 35, ease:'expo.out'});
 
-gsap.from('#home_title', {opacity:0, duration: 3, delay: 1.3, y: 35, ease:'expo.out'});
-gsap.from('#home_subtitle', {opacity:0, duration: 3, delay: 1.1, y: 35, ease:'expo.out'});
+gsap.from('#home_title', {opacity:0, duration: 3, delay: 1.3, ease:'expo.out'});
+gsap.from('#home_subtitle', {opacity:0, duration: 3, delay: 1.1, ease:'expo.out'});
 
 /*===== SCROLL REVEAL =======*/
 const sr = new ScrollReveal({
